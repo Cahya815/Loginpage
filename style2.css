@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+
+body {
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background-color: hsl(206, 100%, 6%);
+  color: #ffff;
+  padding: 0;
+  margin: 0;
+}
+
+.image {
+  /* background-color: #eaeaea; */
+  padding-left: 5%;
+  z-index: auto;
+  width: 33%;
+  height: 60%;
+  align-items: center;
+  /* background-color: white; */
+}
+header {
+  width: 1000px;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* color: white; */
+}
+
+header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+.text1 {
+  place-items: left;
+  align-content: center;
+  min-height: 80vh;
+  /* background-color: orange; */
+  margin: 0;
+  /* width: 100%; */
+  padding-right: 18vw;
+}
+section1 {
+  display: flex;
+  place-items: left;
+  align-content: center;
+  min-height: 80vh;
+  padding-left: 10vw;
+  margin: 0;
+  width: 100%;
+  /* background-color: red; */
+}
+
+section2 {
+  display: flex;
+  place-items: right;
+  align-content: center;
+  padding-top: 20%;
+  padding-left: 5vw;
+  margin: 0;
+  width: 100%;
+}
+
+.text2 {
+  place-items: right;
+  align-content: center;
+  /* max-height: 75vh; */
+  /* background-color: orange; */
+  margin: 0;
+  /* width: 100%; */
+  padding-right: 18vw;
+  padding-left: 5vw;
+}
+
+.section3 {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden {
+  transform: translateX(-100%);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showDetail 1s 0.5s forwards;
+}
+
+.image {
+  transform: translateX(100%);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showDetail 1s 1.25s forwards;
+}
+
+@keyframes showDetail {
+  to {
+    transform: translateX(-0%);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Ibot style */
+
+/* *, 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+.container {
+  max-width: 40vw;
+  margin: 0 auto;
+  /* background-color: orange; */
+  /* padding-right: 40vh; */
+  place-content: left;
+  max-height: 75vh;
+}
+
+.wrapper {
+  /* min-height: 100vh; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 325px;
+}
+
+.content {
+  margin: 8px;
+}
+
+input {
+  border: none;
+  background-color: #eaeaea;
+  color: black;
+  padding: 20px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  border: none;
+  background-color: deepskyblue;
+  font-size: 24px;
+  margin-left: 10px;
+  padding: 16px;
+  color: wheat;
+  font-weight: 600;
+  height: 65px;
+  margin-top: 10px;
+}
+
+#pertanyaan {
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+#loaders {
+  display: none;
+  border-radius: 50%;
+  border-top: 10px solid pink;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  animation: spin 500ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
